@@ -2,20 +2,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import {useEffect,useState, useRef} from 'react'
-import Script from 'next/script'
-import Plyr from 'plyr'
+
+import Header from '../components/Header'
 
 import Aquaher from '../public/assets/svg/aquaher.svg';
 import Plastic from '../public/assets/svg/plastic-her.svg';
 import Herediatrans from '../public/assets/svg/herediatrans.svg';
 import Galacticos from '../public/assets/svg/galacticos.svg';
 
-import Aquaherw from '../public/assets/svg/aquaherw.svg';
-import Plasticw from '../public/assets/svg/plastic-herw.svg';
-import Herediatransw from '../public/assets/svg/herediatransw.svg';
-import Galacticosw from '../public/assets/svg/galacticosw.svg';
-
 import ButtonPlay from '../public/assets/svg/play.svg'
+import Footer from '../components/Footer'
+
 
 export default function Index() {
   const route = useRouter();
@@ -35,37 +32,7 @@ export default function Index() {
 
   return (
     <>
-        <header>
-            <nav className="d-flex color-white">
-                <div className="logo">
-                  <a href="#">
-                    <Image src='/assets/svg/logo.svg' width={170} height={122}></Image>
-                  </a>
-                </div>
-                <div className="navigate">
-                    <ul className="nav-items">
-                        <li className="item active">Inicio</li>
-                        <li>|</li>
-                        <li className="item">
-                            <a onClick={async()=>{
-                               //var elem = document.querySelector('div.plyr');
-                               //elem.parentNode.removeChild(elem);
-                              route.push('/aquaher')
-                              
-                              }}>Aquaher</a>
-                        </li>
-                        <li>|</li>
-                        <li className="item">
-                            <a href="/plastic-her">Plastic-her</a>
-                        </li>
-                        <li>|</li>
-                        <li className="item">
-                            <a href="/blogs">Blogs</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-          </header>
+        <Header></Header>
           <main className="home">
             <div className={"preload " + hidden}>
               <div className="content-preload">
@@ -145,27 +112,7 @@ export default function Index() {
             </div>
           </div>
         </section> 
-        <footer>
-          <div className="empresas">
-            <ul className="nav-itemsvg">
-              <li className="itsvg">
-                <Aquaherw/>
-              </li>
-              <li className="itsvg">
-                <Plasticw/>
-              </li>
-              <li className="itsvg">
-                <Herediatransw/>
-              </li>
-              <li className="itsvg">
-                <Galacticosw/>
-              </li>
-            </ul>
-          </div>
-          <div className="foot-info">
-            <span>Desarrollado por el Area de Tics GRUPOHEREDIA ©2022</span>
-          </div>
-        </footer>   
+         <Footer/>  
     </>
   )
 }

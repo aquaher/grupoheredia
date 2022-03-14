@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 export default function Document() {
     
   return (
-    <Html>
+    <Html lang='es'>
       <Head>
           <Layout></Layout>
     </Head>
