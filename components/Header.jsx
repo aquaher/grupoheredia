@@ -10,10 +10,21 @@ export default function Header(){
         console.log(router.pathname)
         console.log(router.pathname == '/')
     })
-    
+    function Comps(){
+        if(router.pathname == '/blogs'){
+            return (
+                <>
+                    <div class="head-for"></div>
+                    <div class="head-w"></div>
+                </>
+            );
+        }else{
+            return null
+        }
+    }
     return(
         <>
-            <header>
+            <header className={(router.pathname == '/blogs')? 'head-back':null}>
             <nav className="d-flex color-white">
                 <div className="logo">
                   <a href="#">
@@ -40,7 +51,7 @@ export default function Header(){
                             </Link> 
                         </li>
                         <li>|</li>
-                        <li className="item">
+                        <li className={(router.pathname == '/blogs')? 'item active':'item'}>
                             <Link href="/blogs">
                                 <a>Blogs</a>
                             </Link>
@@ -48,6 +59,7 @@ export default function Header(){
                     </ul>
                 </div>
             </nav>
+            <Comps></Comps>
           </header>
         </>
     );
