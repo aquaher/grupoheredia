@@ -107,7 +107,10 @@ export default function Index() {
                         </div>
                         <div className="car-text">
                             <p>
-                                Tratada mediante coagulación, filtros multimedia, ultrafiltración y membranas de ósmosis inversa, que permite la eliminación de sólidos totales disueltos, metales pesados, microorganismos patógenos perjudiciales para la salud, garantizando la inocuidad y seguridad de procesos y productos. Nuestra agua purificada disminuye mantenimientos y mejora la duración de la vida útil de maquinarias industriales.
+                                Tratada mediante coagulación, filtros multimedia, ultrafiltración, membranas de ósmosis inversa y ozonificación. 
+                                Reducimos sólidos totales disueltos, metales pesados y dureza. Eliminamos microorganismos patógenos perjudiciales para la salud, 
+                                garantizando la inocuidad y seguridad de procesos y productos. Nuestra agua purificada disminuye mantenimientos y 
+                                mejora la duración de la vida útil de maquinarias industriales.
                             </p>
                             <a onClick={(e)=>onClickVerMas(e,Purificada)}>Ver mas...</a>
                         </div>
@@ -123,7 +126,10 @@ export default function Index() {
                         </div>
                         <div className="car-text">
                             <p>
-                                Bajo un proceso de coagulación, filtros multimedia y ultrafiltración se elimina la turbiedad, bacterias, protozoos y otros microorganismos lo cual la vuelve un agua baja en densidad de sedimentos. Nuestro proceso retiene partículas de hasta 0,01 µm y es ozonizada para garantizar una mayor calidad e inocuidad en el producto final.
+                                Bajo un proceso de coagulación, filtros multimedia y ultrafiltración se elimina la turbiedad, bacterias,
+                                protozoos y otros microorganismos. Nuestra agua se caracteriza por tener una densidad de sedimentos baja. 
+                                Nuestro proceso retiene partículas de hasta 0,01 µm y es ozonizada para garantizar una mayor calidad e inocuidad
+                                en el producto final.
                             </p>
                             <a onClick={(e)=>onClickVerMas(e,Ultrafiltrada)}>Ver mas...</a>
                         </div>
@@ -139,7 +145,8 @@ export default function Index() {
                         </div>
                         <div className="car-text">
                             <p>
-                                Nuestra agua genérica, se somete a un proceso de filtración inicial, logrando mantener los minerales naturales, permitiendo ser ideal para el uso en la agricultura, gnadería y limpieza en el hogar.
+                                Nuestra agua genérica se somete a un proceso de filtración inicial, mantiene los minerales naturales y
+                                es ideal para el uso en la agricultura, gnadería y limpieza en el hogar.
                             </p>
                             <a onClick={(e)=>onClickVerMas(e,Generica)}>Ver mas...</a>
                         </div>
@@ -154,8 +161,8 @@ export default function Index() {
                             <div className="card-image"></div>
                             <div className="card-text card2">
                                 <h2>Agrícola</h2>
-                                <p>Un agua ideal para el riego de plantas al aportar nutrientes como el calcio, potasio,
-                                    sodio, etc.)</p>
+                                <p>Un agua ideal para el riego de plantas porque aporta nutrientes como el calcio, potasio,
+                                    sodio, etc.</p>
                             </div>
                             <div className="card-stats card2">
                                 <a href="#">
@@ -167,7 +174,7 @@ export default function Index() {
                             <div className="card-image card10"></div>
                             <div className="card-text card3">
                                 <h2>Hogares</h2>
-                                <p>Actividades diarias del hogar, como limpieza de superficies, y lavado de ropa.</p>
+                                <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
                             </div>
                             <div className="card-stats card2">
                                 <a href="#">
@@ -180,7 +187,7 @@ export default function Index() {
                             <div className="card-text">
                                 <h2>Sector industrial</h2>
                                 <p>Agua ideal para procesos industriales, como sistemas de transferencia de calor
-                                    (calderos, intercambiadores de calor, torres de enfriamiento, autoclave, chillers,
+                                    (calderos, intercambiadores de calor, torres de enfriamiento, autoclaves, chillers,
                                     etc.)</p>
                             </div>
                             <div className="card-stats card2">
@@ -193,9 +200,9 @@ export default function Index() {
                             <div className="card-image card3"></div>
                             <div className="card-text card2">
                                 <h2>Laboratorio de larvas</h2>
-                                <p>95% de supervivencia en la crianza de tus larvas de camarón, nuestra agua purificada
+                                <p>Incrementa la supervivencia de las larvas de camarón. El agua purificada
                                     cuenta con desinfección de ozono y se encuentra libre de microorganismos patógenos,
-                                    volviéndose altamente beneficioso para el desarrollo de tus larvas.</p>
+                                    volviéndose altamente beneficiosa para su desarrollo.</p>
                             </div>
                             <div className="card-stats card2">
                                 <a href="#">
@@ -208,7 +215,7 @@ export default function Index() {
                             <div className="card-text card2">
                                 <h2>Hospitales y clínicas</h2>
                                 <p>Nuestra agua purificada está libre de sustancias no deseadas como parásitos, cloro,
-                                    flúor, dioxidas, alcanzando los altos estándares de calidad</p>
+                                    flúor, dioxinas, alcanzando los altos estándares de calidad</p>
                             </div>
                             <div className="card-stats card2">
                                 <a href="#">
@@ -220,9 +227,8 @@ export default function Index() {
                             <div className="card-image card5"></div>
                             <div className="card-text card2">
                                 <h2>Embotelladoras</h2>
-                                <p>Desarrollamos todos los procesos de purificación del agua lista para su envasado y la
-                                    venta al consumo humano a un menor costo, logrando incrementar sus ganancias.
-                                    Cumplimos con todos los requisitos fisicoquímicos y microbiológicos</p>
+                                <p>Agua lista para envasado y venta al consumo humano.
+                                    Cumplimos con todos los requisitos fisicoquímicos y microbiológicos.</p>
                             </div>
                             <div className="card-stats card2">
                                 <a href="#">
@@ -235,7 +241,7 @@ export default function Index() {
                             <div className="card-text card2">
                                 <h2>Avícolas</h2>
                                 <p>Agua ideal para las aves al estar libre de microorganismos patógenos gracias a la
-                                    desinfección con ozono, evita enfermedades gastrointestinales e incrementa el
+                                    desinfección con ozono. Evita enfermedades gastrointestinales e incrementa el
                                     rendimiento en la producción al contar con aves más saludables.</p>
                             </div>
                             <div className="card-stats card2">
@@ -249,7 +255,7 @@ export default function Index() {
                             <div className="card-text card2">
                                 <h2>Fábricas de hielo</h2>
                                 <p>Nuestra agua es desinfectada con ozono encontrandose libre de sustancias no deseadas
-                                    como parásitos, cloro, flúor, dioxidas, siendo materia prima ideal para la obtención
+                                    como parásitos, cloro, flúor, dioxinas, siendo materia prima ideal para la obtención
                                     de marquetas de hielo.</p>
                             </div>
                             <div className="card-stats card2">
@@ -262,9 +268,8 @@ export default function Index() {
                             <div className="card-image card8"></div>
                             <div className="card-text card2">
                                 <h2>Sector Piscinas</h2>
-                                <p>Agua ozonizada con un pH entre 7 y 8, que, al no tener microorganismos patógenos, no
-                                    desarrolla coloración con químicos y no crea enfermedades cutáneas, volviéndola
-                                    ideal para piscinas..</p>
+                                <p>Agua ozonizada con un pH entre 7 y 8, no tiene microorganismos patógenos, no
+                                    desarrolla coloración con químicos y no crea enfermedades cutáneas.</p>
                             </div>
                             <div className="card-stats card2">
                                 <a href="#">

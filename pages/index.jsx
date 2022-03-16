@@ -24,12 +24,18 @@ export default function Index() {
   
 
   
-  function onPause(){
+  function onPause(e){
     setHidden('');
     setPause(true);
     ref.current.pause();
   }
 
+ 
+  function onClickPlay(e){
+    setPause(false)
+    setHidden('hidden')
+    ref.current.play()
+  }
   return (
     <>
         <Header></Header>
@@ -37,11 +43,7 @@ export default function Index() {
             <div className={"preload " + hidden}>
               <div className="content-preload">
                 <div className="content-play">
-                  <a className="btn-player" onClick={()=>{
-                    setPause(false)
-                    setHidden('hidden')
-                    ref.current.play()
-                  }}>
+                  <a className="btn-player" onClick={onClickPlay}>
                     <ButtonPlay></ButtonPlay>
                   </a>
                 </div>
@@ -65,19 +67,19 @@ export default function Index() {
           <div className="gh-mivi">
               <div className="f-mivi">
                   <div className="gh-cont">Misión</div>
-                  <p>Somos un grupo empresarial pioneros en desarrollar nuevas líneas de productos y servicios vanguardistas orientados al sector comercial a través de innovaciones eco-amigables.
+                  <p>Somos un grupo empresarial pionero en desarrollar nuevas líneas de productos y servicios vanguardistas orientados al sector industrial a través de innovaciones eco-amigables.
                   </p>
               </div>
               <div className="f-mivi">
                   <div className="gh-cont">Visión</div>
                   <p>Ser líderes en desarrollo industrial de productos y servicios enfocado a la innovación tecnológica, 
-                      generando cambios exponenciales en sectores estrategicos dentro de nuestro país.
+                      generando cambios exponenciales en sectores estratégicos dentro de nuestro país.
                   </p>
               </div>
           </div>
           <h1 className="gh-title sub">Nuestras empresas</h1>
           <div className="content-bussines">
-            <div className="box">
+            <div className="box" onClick={()=>route.push('/aquaher')}>
               <div className="content">
                 <Aquaher/>
               </div>
