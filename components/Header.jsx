@@ -11,11 +11,11 @@ export default function Header(){
         console.log(router.pathname == '/')
     })
     function Comps(){
-        if(router.pathname == '/blogs'){
+        if(router.pathname == '/blogs'|| router.pathname == '/contacto'){
             return (
                 <>
-                    <div class="head-for"></div>
-                    <div class="head-w"></div>
+                    <div className="head-for"></div>
+                    <div className="head-w"></div>
                 </>
             );
         }else{
@@ -24,7 +24,7 @@ export default function Header(){
     }
     return(
         <>
-            <header className={(router.pathname == '/blogs')? 'head-back':null}>
+            <header className={(router.pathname == '/blogs'|| router.pathname == '/contacto')? 'head-back':null}>
             <nav className="d-flex color-white">
                 <div className="logo">
                   <a href="#">
@@ -54,6 +54,12 @@ export default function Header(){
                         <li className={(router.pathname == '/blogs')? 'item active':'item'}>
                             <Link href="/blogs">
                                 <a>Blogs</a>
+                            </Link>
+                        </li>
+                        <li>|</li>
+                        <li className={(router.pathname == '/contacto')? 'item active':'item'}>
+                            <Link href="/contacto">
+                                <a>Contactanos</a>
                             </Link>
                         </li>
                     </ul>

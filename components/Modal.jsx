@@ -7,7 +7,7 @@ export default function Modal({show,onClose,children,title}){
 
     useEffect(()=>{
         setIsBrowser(true);
-    })
+    }, [])
 
     function handleClose(e){
         e.preventDefault();
@@ -18,8 +18,8 @@ export default function Modal({show,onClose,children,title}){
         <div className={styles.overlay}>
             <div className={styles.modal}>
                 <div className={styles.header}>
-                    <a href="#" onClick={handleClose}>
-                        <button>X</button>
+                    <a className='close-button' onClick={handleClose}>
+                        X
                     </a>
                 </div>
                 <div className={styles.body}>{children}</div>

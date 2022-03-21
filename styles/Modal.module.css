@@ -1,10 +1,13 @@
 .modal{
-    background:#fff;
+    background:rgb(88, 112, 248);
     width: 500px;
     height: 600px;
     border-radius: 15px;
     padding: 20px;
     z-index: 100;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 .header{
     display: flex;
@@ -14,6 +17,7 @@
 }
 .body{
     padding-top: 10px;
+    overflow-y: scroll;
 }
 .overlay{
     position: fixed;
@@ -26,5 +30,6 @@
     align-items: center;
     background: center;
     background-color: rgba(0,0,0,.7);
+    padding: 20px;
     z-index: 9999;
 }
