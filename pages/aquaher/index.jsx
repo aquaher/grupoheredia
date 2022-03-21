@@ -19,6 +19,10 @@ import Purificada from "../../components/aquaher/ver/Purificada";
 import Ultrafiltrada from "../../components/aquaher/ver/Ultrafiltrada";
 import Generica from "../../components/aquaher/ver/Generica";
 import Script from "next/script";
+import Larvas from "../../components/aquaher/informacion/larvas";
+import Hogares from "../../components/aquaher/informacion/hogares";
+import Avicolas from "../../components/aquaher/informacion/avicolas";
+import Hoteles from "../../components/aquaher/informacion/hoteles";
 
 export default function Index() {
   const [showModal, setShowModal] = useState(false);
@@ -29,6 +33,12 @@ export default function Index() {
       e.preventDefault();
       setContent(contenido)
       setShowModal(true)
+  }
+
+  function onClickMasInformacion(e,contenido){
+    e.preventDefault();
+    setContent(contenido);
+    setShowModal(true);
   }
 
   useEffect(()=>{
@@ -165,7 +175,7 @@ export default function Index() {
                                     sodio, etc.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
                                     Mas información
                                 </a>
                             </div>
@@ -177,26 +187,12 @@ export default function Index() {
                                 <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a onClick={(e)=>onClickMasInformacion(e,Hogares)}>
                                     Mas información
                                 </a>
                             </div>
                         </div>
                         <div ref={el => ref.current[2] = el} className="card gallery-item gallery-item-3" data-index="3">
-                            <div className="card-image card2"></div>
-                            <div className="card-text">
-                                <h2>Sector industrial</h2>
-                                <p>Agua ideal para procesos industriales, como sistemas de transferencia de calor
-                                    (calderos, intercambiadores de calor, torres de enfriamiento, autoclaves, chillers,
-                                    etc.)</p>
-                            </div>
-                            <div className="card-stats card2">
-                                <a href="#">
-                                    Mas información
-                                </a>
-                            </div>
-                        </div>
-                        <div ref={el => ref.current[3] = el} className="card gallery-item gallery-item-4" data-index="4">
                             <div className="card-image card3"></div>
                             <div className="card-text card2">
                                 <h2>Laboratorio de larvas</h2>
@@ -205,11 +201,24 @@ export default function Index() {
                                     volviéndose altamente beneficiosa para su desarrollo.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
                                     Mas información
                                 </a>
                             </div>
                         </div>
+                        <div ref={el => ref.current[3] = el} className="card gallery-item gallery-item-4" data-index="4">
+                            <div className="card-image card10"></div>
+                            <div className="card-text card3">
+                                <h2>Hoteles y cruceros</h2>
+                                <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
+                            </div>
+                            <div className="card-stats card2">
+                                <a onClick={(e)=>onClickMasInformacion(e,Hoteles)}>
+                                    Mas información
+                                </a>
+                            </div>
+                        </div>
+                        
                         <div ref={el => ref.current[4] = el} className="card gallery-item gallery-item-5" data-index="5">
                             <div className="card-image card4"></div>
                             <div className="card-text card2">
@@ -218,7 +227,7 @@ export default function Index() {
                                     flúor, dioxinas, alcanzando los altos estándares de calidad</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
                                     Mas información
                                 </a>
                             </div>
@@ -231,7 +240,7 @@ export default function Index() {
                                     Cumplimos con todos los requisitos fisicoquímicos y microbiológicos.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a honClick={(e)=>onClickMasInformacion(e,Larvas)}>
                                     Mas información
                                 </a>
                             </div>
@@ -245,7 +254,7 @@ export default function Index() {
                                     rendimiento en la producción al contar con aves más saludables.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a onClick={(e)=>onClickMasInformacion(e,Avicolas)}>
                                     Mas información
                                 </a>
                             </div>
@@ -259,19 +268,21 @@ export default function Index() {
                                     de marquetas de hielo.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
                                     Mas información
                                 </a>
                             </div>
                         </div>
-                        <div ref={el => ref.current[8] = el} className="card gallery-item gallery-item-2" data-index="2">
-                            <div className="card-image card10"></div>
-                            <div className="card-text card3">
-                                <h2>Hoteles y cruceros</h2>
-                                <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
+                        <div ref={el => ref.current[8] = el} className="card gallery-item gallery-item-9" data-index="9">
+                            <div className="card-image card2"></div>
+                            <div className="card-text">
+                                <h2>Sector industrial</h2>
+                                <p>Agua ideal para procesos industriales, como sistemas de transferencia de calor
+                                    (calderos, intercambiadores de calor, torres de enfriamiento, autoclaves, chillers,
+                                    etc.)</p>
                             </div>
                             <div className="card-stats card2">
-                                <a href="#">
+                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
                                     Mas información
                                 </a>
                             </div>
