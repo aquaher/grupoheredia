@@ -19,9 +19,6 @@ import Purificada from "../../components/aquaher/ver/Purificada";
 import Ultrafiltrada from "../../components/aquaher/ver/Ultrafiltrada";
 import Generica from "../../components/aquaher/ver/Generica";
 import Script from "next/script";
-import Larvas from "../../components/aquaher/informacion/larvas";
-import Hogares from "../../components/aquaher/informacion/hogares";
-import Avicolas from "../../components/aquaher/informacion/avicolas";
 
 export default function Index() {
   const [showModal, setShowModal] = useState(false);
@@ -32,12 +29,6 @@ export default function Index() {
       e.preventDefault();
       setContent(contenido)
       setShowModal(true)
-  }
-
-  function onClickMasInformacion(e,contenido){
-    e.preventDefault();
-    setContent(contenido);
-    setShowModal(true);
   }
 
   useEffect(()=>{
@@ -169,12 +160,12 @@ export default function Index() {
                         <div ref={el => ref.current[0] = el} className="card gallery-item gallery-item-1" data-index="1">
                             <div className="card-image"></div>
                             <div className="card-text card2">
-                                <h2>Agrícola</h2>
+                                <h2>Agricultura y ganaderia</h2>
                                 <p>Un agua ideal para el riego de plantas porque aporta nutrientes como el calcio, potasio,
                                     sodio, etc.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
+                                <a href="#">
                                     Mas información
                                 </a>
                             </div>
@@ -182,30 +173,16 @@ export default function Index() {
                         <div ref={el => ref.current[1] = el} className="card gallery-item gallery-item-2" data-index="2">
                             <div className="card-image card10"></div>
                             <div className="card-text card3">
-                                <h2>Hogares y Urbanizaciones</h2>
+                                <h2>Hogares y urbanizaciones</h2>
                                 <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a onClick={e=>onClickMasInformacion(e,Hogares)}>
+                                <a href="#">
                                     Mas información
                                 </a>
                             </div>
                         </div>
-                        <div ref={el => ref.current[2] = el} className="card gallery-item gallery-item-3" data-index="4">
-                            <div className="card-image card3"></div>
-                            <div className="card-text card2">
-                                <h2>Laboratorio de larvas</h2>
-                                <p>Incrementa la supervivencia de las larvas de camarón. El agua purificada
-                                    cuenta con desinfección de ozono y se encuentra libre de microorganismos patógenos,
-                                    volviéndose altamente beneficiosa para su desarrollo.</p>
-                            </div>
-                            <div className="card-stats card2">
-                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
-                                    Mas información
-                                </a>
-                            </div>
-                        </div>
-                        <div ref={el => ref.current[3] = el} className="card gallery-item gallery-item-4" data-index="3">
+                        <div ref={el => ref.current[2] = el} className="card gallery-item gallery-item-3" data-index="3">
                             <div className="card-image card2"></div>
                             <div className="card-text">
                                 <h2>Sector industrial</h2>
@@ -214,12 +191,25 @@ export default function Index() {
                                     etc.)</p>
                             </div>
                             <div className="card-stats card2">
-                                <a onClick={(e)=>onClickMasInformacion(e,Default)}>
+                                <a href="#">
                                     Mas información
                                 </a>
                             </div>
                         </div>
-                        
+                        <div ref={el => ref.current[3] = el} className="card gallery-item gallery-item-4" data-index="4">
+                            <div className="card-image card3"></div>
+                            <div className="card-text card2">
+                                <h2>Laboratorio de larvas</h2>
+                                <p>Incrementa la supervivencia de las larvas de camarón. El agua purificada
+                                    cuenta con desinfección de ozono y se encuentra libre de microorganismos patógenos,
+                                    volviéndose altamente beneficiosa para su desarrollo.</p>
+                            </div>
+                            <div className="card-stats card2">
+                                <a href="#">
+                                    Mas información
+                                </a>
+                            </div>
+                        </div>
                         <div ref={el => ref.current[4] = el} className="card gallery-item gallery-item-5" data-index="5">
                             <div className="card-image card4"></div>
                             <div className="card-text card2">
@@ -255,7 +245,7 @@ export default function Index() {
                                     rendimiento en la producción al contar con aves más saludables.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a onClick={e=>onClickMasInformacion(e,Avicolas)}>
+                                <a href="#">
                                     Mas información
                                 </a>
                             </div>
@@ -274,12 +264,11 @@ export default function Index() {
                                 </a>
                             </div>
                         </div>
-                        <div ref={el => ref.current[8] = el} className="card gallery-item gallery-item-9" data-index="9">
-                            <div className="card-image card8"></div>
-                            <div className="card-text card2">
-                                <h2>Sector Piscinas</h2>
-                                <p>Agua ozonizada con un pH entre 7 y 8, no tiene microorganismos patógenos, no
-                                    desarrolla coloración con químicos y no crea enfermedades cutáneas.</p>
+                        <div ref={el => ref.current[8] = el} className="card gallery-item gallery-item-2" data-index="2">
+                            <div className="card-image card10"></div>
+                            <div className="card-text card3">
+                                <h2>Hoteles y cruceros</h2>
+                                <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
                             </div>
                             <div className="card-stats card2">
                                 <a href="#">
@@ -327,7 +316,7 @@ export default function Index() {
         </div>
         <Footer/>
         <a href="https://api.whatsapp.com/send?phone=593984197232&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos." 
-            className="float-w">
+            className="float-w" target="_blank">
             <i className="fa fa-whatsapp whats"></i>
         </a>
         <Modal show={showModal} onClose={()=>setShowModal(false)}>
