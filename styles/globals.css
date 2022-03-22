@@ -2447,6 +2447,7 @@ fill: rgba(0, 0, 0, 0.28);
 }
 .blogger{
   padding: 20px 80px;
+  background-color: #fff;
 }
 
 .blogger .logos{
@@ -2480,6 +2481,7 @@ fill: rgba(0, 0, 0, 0.28);
   background: rgb(211, 210, 210);
   color: rgb(0, 0, 0);
   padding: 20px;
+  text-align: justify;
 }
 .blogger .grid .valor-content .imagenes{
   display: grid;
@@ -2609,6 +2611,7 @@ fill: rgba(0, 0, 0, 0.28);
   align-items: center;
   padding: 40px 0;
   flex-direction: column;
+  background-color: #fff;
 }
 .contacto iframe{
   margin: 40px 0 0 0;
@@ -2746,4 +2749,9 @@ fill: rgba(0, 0, 0, 0.28);
    width: 100%;
    margin-left: 0;
  }
+}
+@media (max-width:960px) {
+  .blogger{
+    padding: 10px;
+  }
 }

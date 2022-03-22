@@ -1,5 +1,5 @@
 .modal{
-    background:rgb(88, 112, 248);
+    background:url('/assets/images/fondo_d.png') no-repeat center center fixed;
     width: 500px;
     height: 600px;
     border-radius: 15px;
@@ -18,6 +18,8 @@
 .body{
     padding-top: 10px;
     overflow-y: scroll;
+    text-align: justify;
+    padding-right: 15px;
 }
 .overlay{
     position: fixed;
