@@ -2,8 +2,29 @@ import Header from "../../components/Header";
 import Logo from '../../public/assets/svg/logo.svg';
 import Aquaher from '../../public/assets/svg/aquaher.svg';
 import Image from "next/image";
+import Card from "../../components/blogs/Card";
 
 export default function Blogs(){
+    const data = [
+        {
+            title:'Prueba',
+            body:'otra prueba',
+            img:'/assets/images/rio_p.jpg'
+        },
+        {
+            title:'Prueba 1',
+            body:'otra prueba 2',
+            img:'/assets/images/rio_p2.jpg'
+        },
+        {
+            title:'Prueba 2',
+            body:'otra prueba 3',
+            img:'/assets/images/rio_p.jpg'
+        }
+    ]
+    const Cards =()=> data.map((content,i)=>{
+        return <Card key={i} title={content.title} body={content.body} img={content.img}></Card>
+    })
     return(
         <>
             <Header></Header>
@@ -25,30 +46,9 @@ export default function Blogs(){
                         </div>
                     </div>
                     <div className="enlaces">
-                        <div className="content-buttons">
-                            <div class="pushable">
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front">
-                                Otra investigacion
-                                </span>
-                            </div>
-                            <div class="pushable">
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front">
-                                Otra investigacion
-                                </span>
-                            </div>
-                            <div class="pushable">
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front">
-                                Otra investigacion
-                                </span>
-                            </div>
-                        </div>
+                    <Cards/>
                     </div>
+                    
                 </div>
             </div>
         </>

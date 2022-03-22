@@ -1,9 +1,9 @@
 .modal{
     background:url('/assets/images/fondo_d.png') no-repeat center center fixed;
-    width: 500px;
+    max-width: 500px;
     height: 600px;
     border-radius: 15px;
-    padding: 20px;
+    /*padding: 20px;*/
     z-index: 100;
     color: #fff;
     display: flex;
@@ -13,13 +13,14 @@
     display: flex;
     justify-content: flex-end;
     font-size: 25px;
+    margin: 20px 30px 10px 20px;
 
 }
 .body{
     padding-top: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: justify;
-    padding-right: 15px;
+    /*padding-right: 15px;*/
 }
 .overlay{
     position: fixed;
@@ -34,4 +35,28 @@
     background-color: rgba(0,0,0,.7);
     padding: 20px;
     z-index: 9999;
+}
+.footer{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.asesor{
+    padding: 10px 20px;
+    background-color: var(--aquaher-green);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.modal h2{
+    background-color: #7db828;
+    width: 100%;
+    padding: 5px 20px;
+}
+.modal p{
+    padding: 0 30px;
+}
+.modal ul{
+    padding: 0 35px 0 50px;
 }

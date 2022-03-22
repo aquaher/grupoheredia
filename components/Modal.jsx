@@ -23,6 +23,11 @@ export default function Modal({show,onClose,children,title}){
                     </a>
                 </div>
                 <div className={styles.body}>{children}</div>
+                <div className={styles.footer}>
+                    <a className={styles.asesor}>
+                        Contactar asesor
+                    </a>
+                </div>
             </div>
         </div>
     ):null;
