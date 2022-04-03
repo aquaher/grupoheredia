@@ -31,7 +31,7 @@ export default function Header() {
     }
     return (
         <>
-            <header className={(router.pathname == '/blogs' || router.pathname == '/contacto') ? 'head-back' : null}>
+            <div className={(router.pathname == '/blogs' || router.pathname == '/contacto') ? 'header head-back' : 'header'}>
                 <nav className="d-flex color-white">
                     <div className="logo">
                         <a href="#">
@@ -67,7 +67,7 @@ export default function Header() {
                     </div>
                 </nav>
                 <Comps></Comps>
-            </header>
+            </div>
         </>
     );
 }

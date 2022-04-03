@@ -2,6 +2,7 @@ import { useState,useRef,useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Image from "next/image";
+import ModalC from '@/components/Modalc'
 
 import ArrowLeft from '../../public/assets/svg/arrow_left.svg';
 import ArrowRight from '../../public/assets/svg/arrow_right.svg';
@@ -23,16 +24,27 @@ import Larvas from "../../components/aquaher/informacion/larvas";
 import Hogares from "../../components/aquaher/informacion/hogares";
 import Avicolas from "../../components/aquaher/informacion/avicolas";
 import Hoteles from "../../components/aquaher/informacion/hoteles";
+import { useDisclosure } from "@chakra-ui/react";
+import { instance } from "@/plugins/axiosInstance";
+import Hospitales from "@/components/aquaher/informacion/hostpclinic";
+import Embotelladoras from "@/components/aquaher/informacion/embotelladoras";
+import Industria from "@/components/aquaher/informacion/industria";
 
 export default function Index() {
   const [showModal, setShowModal] = useState(false);
   const [content, setContent] = useState(null);
   const ref = useRef([]);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [purified, setPurified] = useState(null);
+  const [ultrafiltered, setUltrafiltered] = useState(null);
+  const [generic, setGeneric] = useState(null);
+  const [water, setWater] = useState(null);
+  
 
-  function onClickVerMas(e,contenido){
+  function onClickVerMas(e,contenido,type_water){
       e.preventDefault();
-      setContent(contenido)
-      setShowModal(true)
+      setWater(type_water)
+      onOpen()
   }
 
   function onClickMasInformacion(e,contenido){
@@ -41,9 +53,22 @@ export default function Index() {
     setShowModal(true);
   }
 
-  useEffect(()=>{
-    
-  });
+  useEffect(() => {
+    (() => {
+        instance.get('/water/active_open?type_water=generic').then(data => {
+            setGeneric( data.data)
+        })
+        instance.get('/water/active_open?type_water=ultrafiltered').then(data => {
+            setUltrafiltered(data.data)
+        })
+        instance.get('/water/active_open?type_water=purified').then(data => {
+            setPurified(data.data)
+            setWater(data.data)
+        })
+
+
+    })();
+}, []);
 
   function onNext(e){
     e.preventDefault();
@@ -122,7 +147,7 @@ export default function Index() {
                                 garantizando la inocuidad y seguridad de procesos y productos. Nuestra agua purificada disminuye mantenimientos y 
                                 mejora la duración de la vida útil de maquinarias industriales.
                             </p>
-                            <a onClick={(e)=>onClickVerMas(e,Purificada)}>Ver mas...</a>
+                            <a onClick={(e)=>onClickVerMas(e,Purificada,purified)}>Ver mas...</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +166,7 @@ export default function Index() {
                                 Nuestro proceso retiene partículas de hasta 0,01 µm y es ozonizada para garantizar una mayor calidad e inocuidad
                                 en el producto final.
                             </p>
-                            <a onClick={(e)=>onClickVerMas(e,Ultrafiltrada)}>Ver mas...</a>
+                            <a onClick={(e)=>onClickVerMas(e,Ultrafiltrada,ultrafiltered)}>Ver mas...</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +183,7 @@ export default function Index() {
                                 Nuestra agua genérica se somete a un proceso de filtración inicial, mantiene los minerales naturales y
                                 es ideal para el uso en la agricultura, gnadería y limpieza en el hogar.
                             </p>
-                            <a onClick={(e)=>onClickVerMas(e,Generica)}>Ver mas...</a>
+                            <a onClick={(e)=>onClickVerMas(e,Generica,generic)}>Ver mas...</a>
                         </div>
                     </div>
                 </div>
@@ -227,7 +252,7 @@ export default function Index() {
                                     flúor, dioxinas, alcanzando los altos estándares de calidad</p>
                             </div>
                             <div className="card-stats card2">
-                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
+                                <a onClick={(e)=>onClickMasInformacion(e,Hospitales)}>
                                     Mas información
                                 </a>
                             </div>
@@ -240,7 +265,7 @@ export default function Index() {
                                     Cumplimos con todos los requisitos fisicoquímicos y microbiológicos.</p>
                             </div>
                             <div className="card-stats card2">
-                                <a honClick={(e)=>onClickMasInformacion(e,Larvas)}>
+                                <a onClick={(e)=>onClickMasInformacion(e,Embotelladoras)}>
                                     Mas información
                                 </a>
                             </div>
@@ -282,7 +307,7 @@ export default function Index() {
                                     etc.)</p>
                             </div>
                             <div className="card-stats card2">
-                                <a onClick={(e)=>onClickMasInformacion(e,Larvas)}>
+                                <a onClick={(e)=>onClickMasInformacion(e,Industria)}>
                                     Mas información
                                 </a>
                             </div>
@@ -327,9 +352,11 @@ export default function Index() {
         </div>
         <Footer/>
         <a href="https://api.whatsapp.com/send?phone=593984197232&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos." 
-            className="float-w" target="_blank">
+            className="float-w">
             <i className="fa fa-whatsapp whats"></i>
         </a>
+        {water?<ModalC isOpen={isOpen} onClose={onClose} water={water}></ModalC>:null}
+        
         <Modal show={showModal} onClose={()=>setShowModal(false)}>
             {content}
         </Modal>

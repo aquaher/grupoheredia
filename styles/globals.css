@@ -170,7 +170,7 @@ nav.color-white .logo svg path {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-header {
+.header {
   width: 100%;
   position: absolute;
   top: 0px;
@@ -236,6 +236,8 @@ main .preload .content-preload {
 main .preload .content-preload .content-play {
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .justify-content-between {
@@ -446,7 +448,7 @@ aside,
 figcaption,
 figure,
 footer,
-header,
+.header,
 hgroup,
 main,
 nav,
@@ -460,7 +462,7 @@ details,
 figcaption,
 figure,
 footer,
-header,
+.header,
 main,
 menu,
 nav,
@@ -1995,6 +1997,12 @@ img{
   .social__item {
     margin-bottom: 10px;
   }
+  .sec-bu{
+    flex-direction: column;
+  }
+  .sec-tit h2{
+    font-size: 12px;
+  }
 }
 .social__img {
   width: 24px;
@@ -2714,4 +2722,40 @@ fill: rgba(0, 0, 0, 0.28);
   width: 26px;
   fill: currentColor;
   vertical-align: middle;
+}
+.content-table{
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.content-table-h{
+  width: 100%;
+  background-color: rgb(214, 214, 214);
+  text-align: center;
+}
+div.card-stats a {
+  color: #fff;
+}
+.carousel-root{
+  width: 100%;
+}
+.responsive-map-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.responsive-map-container iframe,   
+.responsive-map-container object,  
+.responsive-map-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

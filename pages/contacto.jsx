@@ -52,7 +52,10 @@ export default function Contacto() {
                         </div>
                     </div>
                 </div>
+                <div className="responsive-map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3030111443004!2d-80.48212328524636!3d-0.920872899328236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902beae861c760b5%3A0xa5000195987be86b!2sAquaher%20S.A.!5e0!3m2!1ses-419!2sec!4v1647835729728!5m2!1ses-419!2sec" width="600" height="450" style={style} loading="lazy"></iframe>
+
+                </div>
 
             </div>
         </>
