@@ -6,15 +6,15 @@ COPY package*.json /
 
 EXPOSE 3000
 
-FROM base as production
+#FROM base as production
 
-ENV NODE_ENV=production
+#ENV NODE_ENV=production
 
-RUN npm install
+#RUN npm install
 
-COPY . /
+#COPY . /
 
-RUN npm run build
+#RUN npm run build
 
 #CMD [ "yun start" ]
 

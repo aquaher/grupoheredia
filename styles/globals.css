@@ -2759,3 +2759,18 @@ div.card-stats a {
   width: 100%;
   height: 100%;
 }
+.w_full{
+  width: 100%;
+}
+.propi{
+  width: 787px; opacity: 1; transform: translate3d(0px, 0px, 0px);
+}
+.propi2{
+  width: 787px; opacity: 0; transform: translate3d(-787px, 0px, 0px);
+}
+.propi3{
+  width: 787px; opacity: 0; transform: translate3d(-1574px, 0px, 0px);
+}
+.propi4{
+  width: 787px; opacity: 0; transform: translate3d(-2361px, 0px, 0px);
+}

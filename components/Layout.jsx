@@ -10,7 +10,7 @@ export default function Layout() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     </>
   )
 }
