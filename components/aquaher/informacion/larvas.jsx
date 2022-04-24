@@ -3,37 +3,41 @@ export default function Larvas() {
         <>
             <h2>Laboratorio de larvas</h2>
             <div className="">
-                <p>En la crianza de larvas de camarón un proceso vital es el acondicionamiento de la salinidad del agua, la misma que se realiza con agua dulce (agua de bajos sólidos disueltos), este proceso es esencial para disminuir el índice de mortandad.
-                    Nuestros procesos de ultrafiltración, ósmosis inversa y desinfección con ozono, garantizan la calidad y el beneficio del proceso de crianza de la larva del camarón en sus distintas etapas y reduciendo los químicos, el número de muertes y economizando costos en su proceso de fabricación.
-                    95% DE SUPERVIVENCIA en la crianza de larvas de camarón, han alcanzado nuestros clientes al utilizar nuestra agua purificada y un 80% de supervivencia con nuestra agua ultrafiltrada.</p>
+                <p>
+                En la crianza de larvas de camarón, un proceso vital es el acondicionamiento de la salinidad del agua, el mismo que se realiza con agua dulce. 
+                </p>
+                <p>
+                Nuestros procesos de ultrafiltración, ósmosis inversa y desinfección con ozono, garantizan la calidad y el beneficio del proceso de crianza de la larva del camarón en sus distintas etapas, reduciendo los químicos, el número de muertes y economizando costos en su proceso de crianza.
+                </p>
+                <p>
+                Utilizando agua común se alcanza una supervivencia de aproximadamente un 76%. mientras que con nuestra agua Purificada se obtiene un 90%, en la crianza de larvas de camarón.
+                </p>
                 <h2>Beneficios del agua purificada en su proceso de crianza:</h2>
                 <ul>
-                    <li>Está libre de microorganismos porque está ozonizada.
+                    <li>
+                    Agua ozonizada libre de microorganismos: bacterias, virus, hongos y algas.  
                     </li>
-                    <li>Libre de microorganismos: bacterias, virus, hongos y algas
+                    <li>
+                    Agua sometida a ósmosis cumple con norma INEN 2200 (agua purificada) y supera la normativa INEN 1108 (agua potable).
                     </li>
-                    <li>Agua sometida a ósmosis cumple con norma INEN 2200 y supera la normativa INEN 1108.
+                    <li>
+                    No presenta turbidez visible (menor a 0.5 NTU).
                     </li>
-                    <li>Presenta turbiedad baja.
+                    <li>
+                    Aumenta la supervivencia de larvas en un 90%.
                     </li>
-                    <li>Aumenta la supervivencia de larvas hasta en 95%.
+                    <li>
+                    Crecimiento homogéneo de las larvas.
                     </li>
-                    <li>Incrementa las utilidades de los laboratorios de larvas.
+                    <li>
+                    Incrementa la ganancia en un 25%.
                     </li>
-                </ul>
-                <h2>Beneficios del agua ultrafiltrada en su proceso de crianza:</h2>
-                <ul>
-                    <li>Está libre de microorganismos porque está ozonizada.
+                    <li>
+                    Reducción de uso de químicos de tratamiento de agua.
                     </li>
-                    <li>Libre de microorganismos: bacterias, virus, hongos y algas.
+                    <li>
+                    Agua libre cloro y sus derivados.
                     </li>
-                    <li>Sometida a ultrafiltración, cumple la mayoría de parámetros de la norma INEN 1108 de agua potable.
-                    </li>
-                    <li>Turbiedad baja.
-                    </li>
-                    <li>Aumenta la supervivencia de larvas hasta en 80%.
-                    </li>
-                    <li>Contiene minerales que mejora el crecimiento de las larvas como calcio, magnesio y sodio.</li>
                 </ul>
             </div>
         </>

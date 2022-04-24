@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { useState, useRef, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -25,10 +27,10 @@ import Hogares from "../../components/aquaher/informacion/hogares";
 import Avicolas from "../../components/aquaher/informacion/avicolas";
 import Hoteles from "../../components/aquaher/informacion/hoteles";
 import { useDisclosure } from "@chakra-ui/react";
-import { instance } from "@/plugins/axiosInstance";
 import Hospitales from "@/components/aquaher/informacion/hostpclinic";
 import Embotelladoras from "@/components/aquaher/informacion/embotelladoras";
 import Industria from "@/components/aquaher/informacion/industria";
+import Ganaderia from "@/components/aquaher/informacion/ganaderia";
 
 export default function Index() {
     const [showModal, setShowModal] = useState(false);
@@ -147,7 +149,7 @@ export default function Index() {
                                     garantizando la inocuidad y seguridad de procesos y productos. Nuestra agua purificada disminuye mantenimientos y
                                     mejora la duración de la vida útil de maquinarias industriales.
                                 </p>
-                                <a onClick={(e) => onClickVerMas(e, Purificada, purified)}>Ver mas...</a>
+                            
                             </div>
                         </div>
                     </div>
@@ -166,7 +168,7 @@ export default function Index() {
                                     Nuestro proceso retiene partículas de hasta 0,01 µm y es ozonizada para garantizar una mayor calidad e inocuidad
                                     en el producto final.
                                 </p>
-                                <a onClick={(e) => onClickVerMas(e, Ultrafiltrada, ultrafiltered)}>Ver mas...</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -183,7 +185,7 @@ export default function Index() {
                                     Nuestra agua genérica se somete a un proceso de filtración inicial, mantiene los minerales naturales y
                                     es ideal para el uso en la agricultura, gnadería y limpieza en el hogar.
                                 </p>
-                                <a onClick={(e) => onClickVerMas(e, Generica, generic)}>Ver mas...</a>
+                               
                             </div>
                         </div>
                     </div>
@@ -200,7 +202,7 @@ export default function Index() {
                                         sodio, etc.</p>
                                 </div>
                                 <div className="card-stats card2">
-                                    <a onClick={(e) => onClickMasInformacion(e, Larvas)}>
+                                    <a onClick={(e) => onClickMasInformacion(e, Ganaderia)}>
                                         Mas información
                                     </a>
                                 </div>
@@ -351,7 +353,7 @@ export default function Index() {
                 </div>
             </div>
             <Footer />
-            <a href="https://api.whatsapp.com/send?phone=593984197232&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos."
+            <a href="https://api.whatsapp.com/send?phone=593986709356&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos."
                 className="float-w">
                 <i className="fa fa-whatsapp whats"></i>
             </a>
