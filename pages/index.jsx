@@ -67,7 +67,7 @@ export default function Index() {
         <div className="gh-mivi">
           <div className="f-mivi">
             <div className="gh-cont">Misión</div>
-            <p>Somos un grupo empresarial pionero en desarrollar nuevas líneas de productos y servicios vanguardistas orientados al sector industrial a través de innovaciones eco-amigables.
+            <p>Sooomos un grupo empresarial pionero en desarrollar nuevas líneas de productos y servicios vanguardistas orientados al sector industrial a través de innovaciones eco-amigables.
             </p>
           </div>
           <div className="f-mivi">
