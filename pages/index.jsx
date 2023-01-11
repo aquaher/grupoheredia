@@ -61,7 +61,7 @@ export default function Index() {
         </div>
       </main>
       <section className="grupo">
-        <h1 className="gh-title">Sooomos un Holding Corporativo.</h1>
+        <h1 className="gh-title">Soooomos un Holding Corporativo.</h1>
         <hr />
         <h2 className="gh-subtitle">Creemos firmemente que nuestros valores como holding corporativo, son los que nos han permitido crecer y consolidar cada una de nuestras empresas </h2>
         <div className="gh-mivi">
