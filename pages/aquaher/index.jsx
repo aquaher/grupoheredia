@@ -149,7 +149,7 @@ export default function Index() {
                                     garantizando la inocuidad y seguridad de procesos y productos. Nuestra agua purificada disminuye mantenimientos y
                                     mejora la duración de la vida útil de maquinarias industriales.
                                 </p>
-                            
+
                             </div>
                         </div>
                     </div>
@@ -168,13 +168,13 @@ export default function Index() {
                                     Nuestro proceso retiene partículas de hasta 0,01 µm y es ozonizada para garantizar una mayor calidad e inocuidad
                                     en el producto final.
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div>
                         <div className="tit-aq-2">
-                            <h1 className="gh-title-2">Agua Genérica</h1>
+                            <h1 className="gh-title-2">Agua Tratada</h1>
                         </div>
                         <div className="car-cont">
                             <div className="car-img">
@@ -182,10 +182,10 @@ export default function Index() {
                             </div>
                             <div className="car-text">
                                 <p>
-                                    Nuestra agua genérica se somete a un proceso de filtración inicial, mantiene los minerales naturales y
+                                    Nuestra agua tratada se somete a un proceso de filtración inicial, mantiene los minerales naturales y
                                     es ideal para el uso en la agricultura, gnadería y limpieza en el hogar.
                                 </p>
-                               
+
                             </div>
                         </div>
                     </div>
