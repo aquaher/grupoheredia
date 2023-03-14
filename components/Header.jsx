@@ -52,6 +52,12 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>|</li>
+                            <li className={(router.pathname == '/plastic-her') ? 'item active' : 'item'}>
+                                <Link href='/aquaher'>
+                                    <a>Plastic-Her</a>
+                                </Link>
+                            </li>
+                            <li>|</li>
 
                             <li className={(router.pathname == '/blogs') ? 'item active' : 'item'}>
                                 <Link href="/blogs">
