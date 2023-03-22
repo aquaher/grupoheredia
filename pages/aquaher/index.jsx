@@ -183,7 +183,7 @@ export default function Index() {
                             <div className="car-text">
                                 <p>
                                     Nuestra agua tratada se somete a un proceso de filtración inicial, mantiene los minerales naturales y
-                                    es ideal para el uso en la agricultura, gnadería y limpieza en el hogar.
+                                    es ideal para el uso en la agricultura, ganadería y limpieza en el hogar.
                                 </p>
 
                             </div>
@@ -326,7 +326,32 @@ export default function Index() {
 
                     </div>
                 </div>
+                <h1 className="gh-title">Políticas de calidad</h1>
+                <hr />
+                <h2 className="gh-sub">AquaHer S.A, es una empresa dedicada a la purificación de agua a gran escala, ofreciendo un producto que mantiene estándares de calidad para uso industrial, consumo humano y agrícola; precautelando la integridad y seguridad en cada una de las líneas productivas, garantizando la satisfacción de sus clientes, así como el compromiso de la mejora continua.
+
+                    AquaHer S.A., ha decidido implantar un Sistema de Gestión de Calidad basado en la norma ISO 9001:2015 para mejorar el servicio. Contando con el compromiso de la alta dirección de AquaHer S.A., partiendo de principios básicos como son: certificación BPM, la satisfacción del cliente y el compromiso con la mejora continua del Sistema de Gestión de Calidad. Para ello, la política de Gestión de Calidad de AquaHer se basa en:</h2>
+                <h2 className="gh-sub">
+                    <b>»</b> Compromiso gerencial manteniendo la responsabilidad y liderazgo como base de todo quienes hacen parte de AquaHer S.A., hacia sus colaboradores y clientes.
+                    <br /> <b>»</b>  La mejora continua a través de la gestión de la estrategia de la empresa, el establecimiento y desafío de objetivos y cumplimineto de las regulaciones locales y provinciales.
+                    <br /> <b>»</b> Enfoque en: planificación, ejecución, verificación y actuación en la mejora del Sistema de Gestión, teniendo presente el propósito y contexto de la organización, tanto interno como externo.
+                    <br /> <b>»</b> El cumplimiento de altos estándares de calidad enfocados en la Satisfacción de todos nuestros clientes y partes interesadas, mediante el compromiso de toda la organización en cubrir sus necesidades y expectativas.
+                    <br /> <b>»</b> Mantener las Buenas Prácticas y Manufactura con los requisitos establecidos, así como el cumplimiento de las leyes y reglamentos vigentes aplicables para nuestros productos.
+                    <br /> <b>»</b> La Calidad nos dirige a prestar la máxima atención a la evolución tecnológica y a las posibles mejoras que las nuevas tecnologías pusieran a nuestra disposición.
+                    <br /> <b>»</b> El desarollo, de nuestros colaboradores haciendo uso de las estrategias de formación, capacitación, información y concientización sobre los aspectos técnicos que la empresa requiera.
+
+
+                </h2>
+                <h2 className="gh-sub">
+                    La presente política pretende también proporcionar un marco de referencia para el establecimiento de los objetivos de la calidad. Además, para la aplicación efectiva de estos principios, es absolutamente necesario el apoyo a los mismos tanto de la alta gerencia como de todos los empleados de la organización.
+
+                </h2>
+                <div className="tit-aq-2">
+
+                    <a className="colore" href="/assets/archivos/POLITICA DE CALIDAD.pdf">Descargar políticas de calidad</a>
+                </div>
             </section>
+
             <div className="sec-bussines">
                 <div className="sec-tit">
                     <h2>CLIENTES CORPORATIVOS DE AQUAHER</h2>
