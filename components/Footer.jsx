@@ -1,9 +1,17 @@
+
+import { useRouter } from 'next/router'
 import Aquaherw from '../public/assets/svg/aquaherw.svg';
 import Plasticw from '../public/assets/svg/plastic-herw.svg';
 import Herediatransw from '../public/assets/svg/herediatransw.svg';
 import Galacticosw from '../public/assets/svg/galacticosw.svg';
 
+import  en  from '../public/locale/en'
+import es from '../public/locale/es'
 export default function Footer() {
+  const router = useRouter();
+    
+  const {locale}= router;
+  const t = locale==='en' ? en :es;
   return (
     <>
       <footer>
@@ -24,7 +32,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="foot-info">
-          <span>Desarrollado por el Area de Tics GRUPOHEREDIA ©2023</span>
+          <span>{t.description10}</span>
         </div>
       </footer>
     </>

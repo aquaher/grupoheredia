@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import { useRouter } from 'next/router'
 import { useState, useRef, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Image from "next/image";
 import ModalC from '@/components/Modalc'
+
 
 import ArrowLeft from '../../public/assets/svg/arrow_left.svg';
 import ArrowRight from '../../public/assets/svg/arrow_right.svg';
@@ -32,7 +34,14 @@ import Embotelladoras from "@/components/aquaher/informacion/embotelladoras";
 import Industria from "@/components/aquaher/informacion/industria";
 import Ganaderia from "@/components/aquaher/informacion/ganaderia";
 
+import  en  from '../../public/locale/en'
+import es from '../../public/locale/es'
+
 export default function Index() {
+    const router = useRouter();
+    
+    const {locale}= router;
+    const t = locale==='en' ? en :es;
     const [showModal, setShowModal] = useState(false);
     const [content, setContent] = useState(null);
     const ref = useRef([]);
@@ -122,13 +131,13 @@ export default function Index() {
             </main>
 
             <section className="grupo">
-                <h1 className="gh-title">Somos la industria del agua</h1>
+                <h1 className="gh-title">{t.description14}</h1>
                 <div className="space">
-                    <p className="gh-subtitle">Somos una empresa dedicada a la purificación de agua a gran escala, ofreciendo un producto de calidad para uso industrial y consumo humano.
+                    <p className="gh-subtitle">{t.description15}
                     </p>
                 </div>
                 <div className="tit-aq">
-                    <h1 className="gh-title">Nuestros productos</h1>
+                    <h1 className="gh-title">{t.description16}</h1>
                 </div>
 
                 <Carousel showArrows={true} showStatus={false} showThumbs={false}
@@ -136,7 +145,7 @@ export default function Index() {
                     useKeyboardArrows={true}>
                     <div>
                         <div className="tit-aq-2">
-                            <h1 className="gh-title-2">Agua purificada</h1>
+                            <h1 className="gh-title-2">{t.description17}</h1>
                         </div>
                         <div className="car-cont">
                             <div className="car-img">
@@ -144,10 +153,7 @@ export default function Index() {
                             </div>
                             <div className="car-text">
                                 <p>
-                                    Tratada mediante coagulación, filtros multimedia, ultrafiltración, membranas de ósmosis inversa y ozonificación.
-                                    Reducimos sólidos totales disueltos, metales pesados y dureza. Eliminamos microorganismos patógenos perjudiciales para la salud,
-                                    garantizando la inocuidad y seguridad de procesos y productos. Nuestra agua purificada disminuye mantenimientos y
-                                    mejora la duración de la vida útil de maquinarias industriales.
+                                    {t.description18}
                                 </p>
 
                             </div>
@@ -155,7 +161,7 @@ export default function Index() {
                     </div>
                     <div>
                         <div className="tit-aq-2">
-                            <h1 className="gh-title-2">Agua Ultrafiltrada</h1>
+                            <h1 className="gh-title-2">{t.description19}</h1>
                         </div>
                         <div className="car-cont">
                             <div className="car-img">
@@ -163,10 +169,7 @@ export default function Index() {
                             </div>
                             <div className="car-text">
                                 <p>
-                                    Bajo un proceso de coagulación, filtros multimedia y ultrafiltración se elimina la turbiedad, bacterias,
-                                    protozoos y otros microorganismos. Nuestra agua se caracteriza por tener una densidad de sedimentos baja.
-                                    Nuestro proceso retiene partículas de hasta 0,01 µm y es ozonizada para garantizar una mayor calidad e inocuidad
-                                    en el producto final.
+                                    {t.description20}
                                 </p>
 
                             </div>
@@ -174,7 +177,7 @@ export default function Index() {
                     </div>
                     <div>
                         <div className="tit-aq-2">
-                            <h1 className="gh-title-2">Agua Tratada</h1>
+                            <h1 className="gh-title-2">{t.description21}</h1>
                         </div>
                         <div className="car-cont">
                             <div className="car-img">
@@ -182,8 +185,7 @@ export default function Index() {
                             </div>
                             <div className="car-text">
                                 <p>
-                                    Nuestra agua tratada se somete a un proceso de filtración inicial, mantiene los minerales naturales y
-                                    es ideal para el uso en la agricultura, ganadería y limpieza en el hogar.
+                                    {t.description22}
                                 </p>
 
                             </div>
@@ -197,51 +199,48 @@ export default function Index() {
                             <div ref={el => ref.current[0] = el} className="card gallery-item gallery-item-1" data-index="1">
                                 <div className="card-image"></div>
                                 <div className="card-text card2">
-                                    <h2>Agricultura y ganaderia</h2>
-                                    <p>Un agua ideal para el riego de plantas porque aporta nutrientes como el calcio, potasio,
-                                        sodio, etc.</p>
+                                    <h2>{t.description23}</h2>
+                                    <p>{t.description24}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Ganaderia)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
                             <div ref={el => ref.current[1] = el} className="card gallery-item gallery-item-2" data-index="2">
                                 <div className="card-image card10"></div>
                                 <div className="card-text card3">
-                                    <h2>Hogares y urbanizaciones</h2>
-                                    <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
+                                    <h2>{t.description26}</h2>
+                                    <p>{t.description27}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Hogares)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
                             <div ref={el => ref.current[2] = el} className="card gallery-item gallery-item-3" data-index="3">
                                 <div className="card-image card3"></div>
                                 <div className="card-text card2">
-                                    <h2>Laboratorio de larvas</h2>
-                                    <p>Incrementa la supervivencia de las larvas de camarón. El agua purificada
-                                        cuenta con desinfección de ozono y se encuentra libre de microorganismos patógenos,
-                                        volviéndose altamente beneficiosa para su desarrollo.</p>
+                                    <h2>{t.description28}</h2>
+                                    <p>{t.description29}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Larvas)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
                             <div ref={el => ref.current[3] = el} className="card gallery-item gallery-item-4" data-index="4">
                                 <div className="card-image card10"></div>
                                 <div className="card-text card3">
-                                    <h2>Hoteles y cruceros</h2>
-                                    <p>Actividades diarias del hogar como limpieza de superficies y lavado de ropa.</p>
+                                    <h2>{t.description30}</h2>
+                                    <p>{t.description31}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Hoteles)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
@@ -249,68 +248,60 @@ export default function Index() {
                             <div ref={el => ref.current[4] = el} className="card gallery-item gallery-item-5" data-index="5">
                                 <div className="card-image card4"></div>
                                 <div className="card-text card2">
-                                    <h2>Hospitales y clínicas</h2>
-                                    <p>Nuestra agua purificada está libre de sustancias no deseadas como parásitos, cloro,
-                                        flúor, dioxinas, alcanzando los altos estándares de calidad</p>
+                                    <h2>{t.description32}</h2>
+                                    <p>{t.description33}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Hospitales)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
                             <div ref={el => ref.current[5] = el} className="card gallery-item gallery-item-6" data-index="6">
                                 <div className="card-image card5"></div>
                                 <div className="card-text card2">
-                                    <h2>Embotelladoras</h2>
-                                    <p>Agua lista para envasado y venta al consumo humano.
-                                        Cumplimos con todos los requisitos fisicoquímicos y microbiológicos.</p>
+                                    <h2>{t.description34}</h2>
+                                    <p>{t.description35}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Embotelladoras)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
                             <div ref={el => ref.current[6] = el} className="card gallery-item gallery-item-7" data-index="7">
                                 <div className="card-image card6"></div>
                                 <div className="card-text card2">
-                                    <h2>Avícolas</h2>
-                                    <p>Agua ideal para las aves al estar libre de microorganismos patógenos gracias a la
-                                        desinfección con ozono. Evita enfermedades gastrointestinales e incrementa el
-                                        rendimiento en la producción al contar con aves más saludables.</p>
+                                    <h2>{t.description36}</h2>
+                                    <p>{t.description37}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Avicolas)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
                             <div ref={el => ref.current[7] = el} className="card gallery-item gallery-item-8" data-index="8">
                                 <div className="card-image card7"></div>
                                 <div className="card-text card2">
-                                    <h2>Fábricas de hielo</h2>
-                                    <p>Nuestra agua es desinfectada con ozono encontrandose libre de sustancias no deseadas
-                                        como parásitos, cloro, flúor, dioxinas, siendo materia prima ideal para la obtención
-                                        de marquetas de hielo.</p>
+                                    <h2>{t.description38}</h2>
+                                    <p>{t.description39}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Larvas)}>
-                                        Mas información
+                                       {t.description25}
                                     </a>
                                 </div>
                             </div>
                             <div ref={el => ref.current[8] = el} className="card gallery-item gallery-item-9" data-index="9">
                                 <div className="card-image card2"></div>
                                 <div className="card-text">
-                                    <h2>Sector industrial</h2>
-                                    <p>Agua ideal para procesos industriales, como sistemas de transferencia de calor
-                                        (calderos, intercambiadores de calor, torres de enfriamiento, autoclaves, chillers,
-                                        etc.)</p>
+                                    <h2>{t.description40}</h2>
+                                    <p>{t.description41}</p>
                                 </div>
                                 <div className="card-stats card2">
                                     <a onClick={(e) => onClickMasInformacion(e, Industria)}>
-                                        Mas información
+                                        {t.description25}
                                     </a>
                                 </div>
                             </div>
@@ -326,35 +317,32 @@ export default function Index() {
 
                     </div>
                 </div>
-                <h1 className="gh-title">Políticas de calidad</h1>
+                <h1 className="gh-title">{t.description42}</h1>
                 <hr />
-                <h2 className="gh-sub">AquaHer S.A, es una empresa dedicada a la purificación de agua a gran escala, ofreciendo un producto que mantiene estándares de calidad para uso industrial, consumo humano y agrícola; precautelando la integridad y seguridad en cada una de las líneas productivas, garantizando la satisfacción de sus clientes, así como el compromiso de la mejora continua.
-
-                    AquaHer S.A., ha decidido implantar un Sistema de Gestión de Calidad basado en la norma ISO 9001:2015 para mejorar el servicio. Contando con el compromiso de la alta dirección de AquaHer S.A., partiendo de principios básicos como son: certificación BPM, la satisfacción del cliente y el compromiso con la mejora continua del Sistema de Gestión de Calidad. Para ello, la política de Gestión de Calidad de AquaHer se basa en:</h2>
+                <h2 className="gh-sub">{t.description43}</h2>
                 <h2 className="gh-sub">
-                    <b>»</b> Compromiso gerencial manteniendo la responsabilidad y liderazgo como base de todo quienes hacen parte de AquaHer S.A., hacia sus colaboradores y clientes.
-                    <br /> <b>»</b>  La mejora continua a través de la gestión de la estrategia de la empresa, el establecimiento y desafío de objetivos y cumplimineto de las regulaciones locales y provinciales.
-                    <br /> <b>»</b> Enfoque en: planificación, ejecución, verificación y actuación en la mejora del Sistema de Gestión, teniendo presente el propósito y contexto de la organización, tanto interno como externo.
-                    <br /> <b>»</b> El cumplimiento de altos estándares de calidad enfocados en la Satisfacción de todos nuestros clientes y partes interesadas, mediante el compromiso de toda la organización en cubrir sus necesidades y expectativas.
-                    <br /> <b>»</b> Mantener las Buenas Prácticas y Manufactura con los requisitos establecidos, así como el cumplimiento de las leyes y reglamentos vigentes aplicables para nuestros productos.
-                    <br /> <b>»</b> La Calidad nos dirige a prestar la máxima atención a la evolución tecnológica y a las posibles mejoras que las nuevas tecnologías pusieran a nuestra disposición.
-                    <br /> <b>»</b> El desarollo, de nuestros colaboradores haciendo uso de las estrategias de formación, capacitación, información y concientización sobre los aspectos técnicos que la empresa requiera.
+                    <b>»</b> {t.description44}
+                    <br /> <b>»</b>{t.description45}
+                    <br /> <b>»</b>{t.description46}
+                    <br /> <b>»</b> {t.description47}
+                    <br /> <b>»</b>{t.description48}
+                    <br /> <b>»</b>{t.description49}
+                    <br /> <b>»</b>{t.description50}
 
 
                 </h2>
                 <h2 className="gh-sub">
-                    La presente política pretende también proporcionar un marco de referencia para el establecimiento de los objetivos de la calidad. Además, para la aplicación efectiva de estos principios, es absolutamente necesario el apoyo a los mismos tanto de la alta gerencia como de todos los empleados de la organización.
-
+                    {t.description51}
                 </h2>
                 <div className="tit-aq-2">
 
-                    <a className="colore" href="/assets/archivos/POLITICA DE CALIDAD.pdf">Descargar políticas de calidad</a>
+                    <a className="colore" href="/assets/archivos/POLITICA DE CALIDAD.pdf">{t.description52}</a>
                 </div>
             </section>
 
             <div className="sec-bussines">
                 <div className="sec-tit">
-                    <h2>CLIENTES CORPORATIVOS DE AQUAHER</h2>
+                    <h2>{t.description53}</h2>
                 </div>
                 <div className="sec-bu">
                     <div className="sec-bu-c">

@@ -12,10 +12,14 @@ import Galacticos from '../public/assets/svg/galacticos.svg';
 
 import ButtonPlay from '../public/assets/svg/play.svg'
 import Footer from '../components/Footer'
-
+import  en  from '../public/locale/en'
+import es from '../public/locale/es'
 
 export default function Index() {
   const route = useRouter();
+  const {locale}= route;
+  const t = locale==='en' ? en :es;
+
   const ref = useRef();
   const [stop, setStop] = useState('plyr plyr--full-ui plyr--video plyr--html5 plyr--fullscreen-enabled plyr--paused plyr--stopped plyr--pip-supported plyr__poster-enabled')
   const [play, setPlay] = useState('plyr plyr--full-ui plyr--video plyr--html5 plyr--fullscreen-enabled plyr--pip-supported plyr__poster-enabled plyr--playing plyr--hide-controls');
@@ -61,30 +65,33 @@ export default function Index() {
         </div>
       </main>
       <section className="grupo">
-        <h1 className="gh-title">Soooomos un Holding Corporativo.</h1>
+       
+        <h1 className="gh-title">{t.title}</h1>
         <hr />
-        <h2 className="gh-subtitle">Creemos firmemente que nuestros valores como holding corporativo, son los que nos han permitido crecer y consolidar cada una de nuestras empresas </h2>
+
+        <h2 className="gh-subtitle">{t.description}</h2>
         <div className="gh-mivi">
           <div className="f-mivi">
-            <div className="gh-cont">Misión</div>
-            <p>Sooomos un grupo empresarial pionero en desarrollar nuevas líneas de productos y servicios vanguardistas orientados al sector industrial a través de innovaciones eco-amigables.
+            <br />
+            <div className="gh-cont">{t.description2}</div>
+            
+            <p>{t.description4}
             </p>
           </div>
           <div className="f-mivi">
-            <div className="gh-cont">Visión</div>
-            <p>Ser líderes en desarrollo industrial de productos y servicios enfocado a la innovación tecnológica,
-              generando cambios exponenciales en sectores estratégicos dentro de nuestro país.
-            </p>
+            <div className="gh-cont">{t.description1}</div>
+            <p>
+            </p>{t.description3}
           </div>
         </div>
-        <h1 className="gh-title sub">Nuestras empresas</h1>
+        <h1 className="gh-title sub">{t.description5}</h1>
         <div className="content-bussines">
           <div className="box" onClick={() => route.push('/aquaher')}>
             <div className="content">
               <Aquaher />
             </div>
             <div className="content-hover green">
-              <p>Especialistas en purificación de agua a gran escala
+              <p>{t.description6}
               </p>
             </div>
           </div>
@@ -93,7 +100,7 @@ export default function Index() {
               <Plastic />
             </div>
             <div className="content-hover orange">
-              <p>Innovadores en productos plásticos eco-amigables: inyección y soplado de bidones y botellas PET</p>
+              <p>{t.description7}</p>
             </div>
           </div>
           <div className="box">
@@ -101,7 +108,7 @@ export default function Index() {
               <Herediatrans />
             </div>
             <div className="content-hover here">
-              <p>Flota de tanqueros enfocada a la prestación de servicio de transporte terrestre</p>
+              <p>{t.description8}</p>
             </div>
           </div>
           <div className="box">
@@ -109,7 +116,7 @@ export default function Index() {
               <Galacticos />
             </div>
             <div className="content-hover blue">
-              <p>Alquiler de campos deportivos de fútbol para entrenamientos y pretemporadas de equipos profesionales y semiprofesionales</p>
+              <p>{t.description9}</p>
             </div>
           </div>
         </div>

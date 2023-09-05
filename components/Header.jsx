@@ -5,8 +5,14 @@ import { useEffect } from 'react';
 import Logo from '../public/assets/svg/logo.svg';
 import Aquaher from '../public/assets/svg/aquaherw.svg'
 
+import  en  from '../public/locale/en'
+import es from '../public/locale/es'
+
 export default function Header() {
     const router = useRouter();
+    
+  const {locale}= router;
+  const t = locale==='en' ? en :es;
     useEffect(() => {
         console.log(router.pathname)
         console.log(router.pathname == '/')
@@ -29,6 +35,7 @@ export default function Header() {
         }
         return <Logo></Logo>;
     }
+    
     return (
         <>
             <div className={(router.pathname == '/blogs' || router.pathname == '/contacto') ? 'header head-back' : 'header'}>
@@ -38,11 +45,13 @@ export default function Header() {
                             <Logos></Logos>
                         </a>
                     </div>
+
+                   
                     <div className="navigate">
                         <ul className="nav-items">
                             <li className={(router.pathname == '/') ? 'item active' : 'item'}>
                                 <Link href='/'>
-                                    <a>Inicio</a>
+                                    <a>{t.description11}</a>
                                 </Link>
                             </li>
                             <li>|</li>
@@ -61,19 +70,37 @@ export default function Header() {
 
                             <li className={(router.pathname == '/blogs') ? 'item active' : 'item'}>
                                 <Link href="/blogs">
-                                    <a>Blogs</a>
+                                    <a>{t.description13}</a>
                                 </Link>
                             </li>
                             <li>|</li>
                             <li className={(router.pathname == '/contacto') ? 'item active' : 'item'}>
                                 <Link href="/contacto">
-                                    <a>Contactanos</a>
+                                    <a>{t.description12}</a>
                                 </Link>
+                                
                             </li>
+                            <li>|   </li>
+                            <li >
+                                <Link href="/" locale="en">
+                                    <a>  EN</a>
+                                </Link>
+                                
+                            </li>
+                            <li>---</li>
+                            <li >
+                                <Link href="/" locale="es">
+                                    <a>ES</a>
+                                </Link>
+                                
+                            </li>
+                           
                         </ul>
+                        
                     </div>
                 </nav>
                 <Comps></Comps>
+                
             </div>
         </>
     );
