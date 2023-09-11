@@ -4,7 +4,7 @@ import Social from '../components/Social'
 export default function Document() {
     
   return (
-    <Html lang='es'>
+    <Html >
       <Head>
           <Layout></Layout>
     </Head>

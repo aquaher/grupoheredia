@@ -11,8 +11,22 @@ import es from '../public/locale/es'
 export default function Header() {
     const router = useRouter();
     
+
+
   const {locale}= router;
-  const t = locale==='en' ? en :es;
+  const t = locale===locale ? en :es;
+
+
+  
+  const changeLang = (e) => {
+    router.push('/', '/', {
+      locale: e.target.value,
+    })
+  }
+
+
+  
+
     useEffect(() => {
         console.log(router.pathname)
         console.log(router.pathname == '/')
@@ -81,19 +95,10 @@ export default function Header() {
                                 
                             </li>
                             <li>|   </li>
-                            <li >
-                                <Link href="/" locale="en">
-                                    <a>  EN</a>
-                                </Link>
-                                
-                            </li>
-                            <li>---</li>
-                            <li >
-                                <Link href="/" locale="es">
-                                    <a>ES</a>
-                                </Link>
-                                
-                            </li>
+                            <select onChange={changeLang} defaultValue={locale}>
+                                <option className="text-black" value="en">EN</option>
+                                <option className="text-black" value="es">ES</option>
+            </select>
                            
                         </ul>
                         

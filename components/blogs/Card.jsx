@@ -9,7 +9,7 @@ export default function Card({ title, body, img }) {
             <div className={style.content}>
                 <h2>{title}</h2>
                 <div className={style.body}>
-                    {body} asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    {body} 
                 </div>
             </div>
 
