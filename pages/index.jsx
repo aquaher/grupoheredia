@@ -12,10 +12,13 @@ import Galacticos from '../public/assets/svg/galacticos.svg';
 
 import ButtonPlay from '../public/assets/svg/play.svg'
 import Footer from '../components/Footer'
+import  en  from '../public/locale/en'
+import es from '../public/locale/es'
 
-export default function Index(props) {
-  
-  const { index } = props
+export default function Index() {
+  const route = useRouter();
+  const {locale}= route;
+  const t = locale==='en' ? en :es;
 
   const ref = useRef();
   const [stop, setStop] = useState('plyr plyr--full-ui plyr--video plyr--html5 plyr--fullscreen-enabled plyr--paused plyr--stopped plyr--pip-supported plyr__poster-enabled')
@@ -63,32 +66,32 @@ export default function Index(props) {
       </main>
       <section className="grupo">
        
-        <h1 className="gh-title">{index.title}</h1>
+        <h1 className="gh-title">{t.title}</h1>
         <hr />
 
-        <h2 className="gh-subtitle">{index.description}</h2>
+        <h2 className="gh-subtitle">{t.description}</h2>
         <div className="gh-mivi">
           <div className="f-mivi">
             <br />
-            <div className="gh-cont">{index.description2}</div>
+            <div className="gh-cont">{t.description2}</div>
             
-            <p>{index.description4}
+            <p>{t.description4}
             </p>
           </div>
           <div className="f-mivi">
-            <div className="gh-cont">{index.description1}</div>
+            <div className="gh-cont">{t.description1}</div>
             <p>
-            </p>{index.description3}
+            </p>{t.description3}
           </div>
         </div>
-        <h1 className="gh-title sub">{index.description5}</h1>
+        <h1 className="gh-title sub">{t.description5}</h1>
         <div className="content-bussines">
           <div className="box" onClick={() => route.push('/aquaher')}>
             <div className="content">
               <Aquaher />
             </div>
             <div className="content-hover green">
-              <p>{index.description6}
+              <p>{t.description6}
               </p>
             </div>
           </div>
@@ -97,7 +100,7 @@ export default function Index(props) {
               <Plastic />
             </div>
             <div className="content-hover orange">
-              <p>{index.description7}</p>
+              <p>{t.description7}</p>
             </div>
           </div>
           <div className="box">
@@ -105,7 +108,7 @@ export default function Index(props) {
               <Herediatrans />
             </div>
             <div className="content-hover here">
-              <p>{index.description8}</p>
+              <p>{t.description8}</p>
             </div>
           </div>
           <div className="box">
@@ -113,7 +116,7 @@ export default function Index(props) {
               <Galacticos />
             </div>
             <div className="content-hover blue">
-              <p>{index.description9}</p>
+              <p>{t.description9}</p>
             </div>
           </div>
         </div>
@@ -121,14 +124,4 @@ export default function Index(props) {
       <Footer />
     </>
   )
-}
-export async function getStaticProps({ locale }) {
-  // const response = await fetch("URL")
-  // const result = await response.json()
-  const response = await import(`../public/locale/${locale}.json`)
-  return {
-    props: {
-      index: response.default.index,
-    },
-  }
 }

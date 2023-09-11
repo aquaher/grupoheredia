@@ -14,7 +14,7 @@ export default function Header() {
 
 
   const {locale}= router;
-  const t = locale===locale ? en :es;
+  const t = locale==='es' ? en :es;
 
 
   
