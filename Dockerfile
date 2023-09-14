@@ -17,5 +17,5 @@ COPY --from=BUILD_IMAGE /app/.next ./.next
 COPY --from=BUILD_IMAGE /app/public ./public
 EXPOSE 3000
 CMD ["yarn", "start"]
-#docker build . -t www.grupoheredia.com
-#docker run -d --restart unless-stopped -p 63010:3000 www.grupoheredia.com
+#docker build . -t www.grupoheredia.com.ec
+#docker run -d --restart unless-stopped -p 63010:3000 www.grupoheredia.com.ec

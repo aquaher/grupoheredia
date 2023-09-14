@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import { useRouter } from "next/router";
 import { ChakraProvider } from '@chakra-ui/react'
-
+import Header from '../components/Header'
 
   
 function MyApp({ Component, pageProps }) {
@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }) {
   
   return (
 
-    <ChakraProvider  >     
+    <  >   
     <Component {...pageProps} />
-  </ChakraProvider>
+  </>
   )
 }
 

@@ -34,8 +34,8 @@ import Embotelladoras from "@/components/aquaher/informacion/embotelladoras";
 import Industria from "@/components/aquaher/informacion/industria";
 import Ganaderia from "@/components/aquaher/informacion/ganaderia";
 
-import  en  from '../../public/locale/en'
-import es from '../../public/locale/es'
+import  en  from '../../locale/en'
+import es from '../../locale/es'
 
 export default function Index() {
     const router = useRouter();

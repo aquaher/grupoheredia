@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Header from "../../components/Header";
 import { useRouter } from 'next/router'
-import  en  from '../../public/locale/en'
-import es from '../../public/locale/es'
+import  en  from '../../locale/en'
+import es from '../../locale/es'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 

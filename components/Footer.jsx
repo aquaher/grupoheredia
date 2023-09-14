@@ -5,8 +5,8 @@ import Plasticw from '../public/assets/svg/plastic-herw.svg';
 import Herediatransw from '../public/assets/svg/herediatransw.svg';
 import Galacticosw from '../public/assets/svg/galacticosw.svg';
 
-import  en  from '../public/locale/en'
-import es from '../public/locale/es'
+import  en  from '../locale/en'
+import es from '../locale/es'
 export default function Footer() {
   const router = useRouter();
     

@@ -4,9 +4,10 @@ import { useEffect } from 'react';
 
 import Logo from '../public/assets/svg/logo.svg';
 import Aquaher from '../public/assets/svg/aquaherw.svg'
+import Plastic from '../public/assets/svg/plastic-her.svg'
 
-import  en  from '../public/locale/en'
-import es from '../public/locale/es'
+import  en  from '../locale/en'
+import es from '../locale/es'
 
 export default function Header() {
     const router = useRouter();
@@ -14,25 +15,20 @@ export default function Header() {
 
 
   const {locale}= router;
-  const t = locale==='es' ? en :es;
+  const t = locale==='en' ? en :es;
+
+
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    router.push(router.route, router.asPath, {locale});
+  };
 
 
   
-  const changeLang = (e) => {
-    router.push('/', '/', {
-      locale: e.target.value,
-    })
-  }
 
-
-  
-
-    useEffect(() => {
-        console.log(router.pathname)
-        console.log(router.pathname == '/')
-    })
+   
     function Comps() {
-        if (router.pathname == '/blogs' || router.pathname == '/contacto') {
+        if (router.asPath == '/blogs' || router.asPath == '/contacto') {
             return (
                 <>
                     <div className="head-for"></div>
@@ -44,15 +40,18 @@ export default function Header() {
         }
     }
     function Logos() {
-        if (router.pathname == '/aquaher') {
+        if (router.asPath == '/aquaher') {
             return <Aquaher></Aquaher>;
+        }
+        if(router.asPath == '/plastic-her'){
+            return <Plastic></Plastic>;
         }
         return <Logo></Logo>;
     }
     
     return (
         <>
-            <div className={(router.pathname == '/blogs' || router.pathname == '/contacto') ? 'header head-back' : 'header'}>
+            <div className={(router.asPath == '/blogs' || router.asPath == '/contacto') ? 'header head-back' : 'header'}>
                 <nav className="d-flex color-white">
                     <div className="logo">
                         <a href="#">
@@ -63,42 +62,48 @@ export default function Header() {
                    
                     <div className="navigate">
                         <ul className="nav-items">
-                            <li className={(router.pathname == '/') ? 'item active' : 'item'}>
+                            <li className={(router.asPath == '/') ? 'item active' : 'item'}>
                                 <Link href='/'>
                                     <a>{t.description11}</a>
                                 </Link>
                             </li>
                             <li>|</li>
-                            <li className={(router.pathname == '/aquaher') ? 'item active' : 'item'}>
+                            <li className={(router.asPath == '/aquaher') ? 'item active' : 'item'}>
                                 <Link href='/aquaher'>
                                     <a>Aquaher</a>
                                 </Link>
                             </li>
                             <li>|</li>
-                            <li className={(router.pathname == '/plastic-her') ? 'item active' : 'item'}>
+                            <li className={(router.asPath == '/plastic-her') ? 'item active' : 'item'}>
                                 <Link href='/plastic-her'>
                                     <a>Plastic-her</a>
                                 </Link>
                             </li>
                             <li>|</li>
 
-                            <li className={(router.pathname == '/blogs') ? 'item active' : 'item'}>
+                            <li className={(router.asPath == '/blogs') ? 'item active' : 'item'}>
                                 <Link href="/blogs">
                                     <a>{t.description13}</a>
                                 </Link>
                             </li>
                             <li>|</li>
-                            <li className={(router.pathname == '/contacto') ? 'item active' : 'item'}>
+                            <li className={(router.asPath == '/contacto') ? 'item active' : 'item'}>
                                 <Link href="/contacto">
                                     <a>{t.description12}</a>
                                 </Link>
                                 
                             </li>
                             <li>|   </li>
-                            <select onChange={changeLang} defaultValue={locale}>
-                                <option className="text-black" value="en">EN</option>
-                                <option className="text-black" value="es">ES</option>
-            </select>
+                            <li>
+
+                            <select
+            onChange={changeLanguage}
+            defaultValue={router.locale}
+            className={'item'}>
+            <option  value="en">EN</option>
+            <option  value="es">ES</option>
+          </select>
+                            </li>
                            
                         </ul>
                         
@@ -110,6 +115,11 @@ export default function Header() {
         </>
     );
 }
+export const getStaticProps = async (context) => {
+    return {
+      props: { context },
+    };
+  };
 /*
 <li className={(router.pathname == '/plastic-her') ? 'item active' : 'item'}>
                                 <Link href='/plastic-her'>

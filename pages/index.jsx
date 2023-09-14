@@ -12,8 +12,8 @@ import Galacticos from '../public/assets/svg/galacticos.svg';
 
 import ButtonPlay from '../public/assets/svg/play.svg'
 import Footer from '../components/Footer'
-import  en  from '../public/locale/en'
-import es from '../public/locale/es'
+import  en  from '../locale/en'
+import es from '../locale/es'
 
 export default function Index() {
   const route = useRouter();
@@ -42,7 +42,7 @@ export default function Index() {
   }
   return (
     <>
-      <Header></Header>
+    <Header></Header>
       <main className="home">
         <div className={"preload " + hidden}>
           <div className="content-preload">

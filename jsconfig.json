@@ -4,7 +4,8 @@
       "paths": {
         "@/components/*": ["components/*"],
         "@/plugins/*": ["plugins/*"],
-        "@/styles/*": ["styles/*"]
+        "@/styles/*": ["styles/*"],
+        "@/pages/*": ["pages/*"]
       }
     }
   }
