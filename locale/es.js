@@ -70,5 +70,5 @@ export default{
     description67:"Los envases fabricados correctamente, acorde con experiencias realizadas son totalmente inofensivos en contacto con los productos de consumo humano.",
     description68:"Fácil reciclado y recuperación",
     description69:"Los gases de la combustión son esencialmente limpios, debido a que el PET no contiene halógenos, sulfuros, u otros materiales de difícil eliminación.",
-
+    description70:"",
 }
